@@ -203,6 +203,7 @@ curl https://raw.githubusercontent.com/cinerieus/nemesisv2/refs/heads/main/confi
 /root/.tmux/plugins/tpm/scripts/install_plugins.sh
 # Fontconfig
 curl https://raw.githubusercontent.com/cinerieus/nemesisv2/refs/heads/main/config/local.conf -o /etc/fonts/local.conf --create-dirs
+chmod 755 /etc/fonts
 sudo -Hu $username curl https://raw.githubusercontent.com/cinerieus/nemesisv2/refs/heads/main/config/.Xresources -o /home/$username/.Xresources && cp /home/$username/.Xresources /root/.Xresources
 sudo -Hu $username xrdb -merge /home/$username/.Xresources && xrdb -merge /home/$username/.Xresources
 # Fish
