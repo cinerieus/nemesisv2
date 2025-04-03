@@ -1,5 +1,5 @@
 #!/bin/bash
-read -p "Run NemesisV2 install script? [Y/N]" continue
+read -p "Run Arch-Nemesis install script? [Y/N]" continue
 if echo "$continue" | grep -iqFv y; then
         exit 0
 fi
@@ -93,7 +93,7 @@ vm=\"$vm\"
 disk=\"$disk\"
 diskpart2=\"$diskpart2\"
 rdppass=\"$rdppass\"
-" > /mnt/nemesisv2.sh
+" > /mnt/nemesis.sh
 
 echo '
 # Configure pacman
