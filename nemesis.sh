@@ -12,8 +12,8 @@ luks_password="1234567890"
 ssh_key=""
 wifi_ssid=""
 wifi_pass=""
-vm=false
-rdppass=""
+vm=true
+rdppass="rdp"
 
 # Set keyboard layout
 loadkeys uk
