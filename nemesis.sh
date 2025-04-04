@@ -104,7 +104,7 @@ Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 curl https://blackarch.org/strap.sh | sh
 echo "Server = https://blackarch.org/blackarch/blackarch/os/x86_64" > /etc/pacman.d/blackarch-mirrorlist
 pacman --noconfirm -Syu
-pacman --noconfirm -S base-devel yay networkmanager systemd-resolvconf openssh git neovim tmux wget p7zip neofetch noto-fonts ttf-noto-nerd fish less ldns
+pacman --noconfirm -Sy base-devel yay networkmanager systemd-resolvconf openssh git neovim tmux wget p7zip neofetch noto-fonts ttf-noto-nerd fish less ldns
 
 # Set timezone to UTC
 printf "\n\nSetting timezone...\n"
@@ -163,7 +163,7 @@ setfacl -Rdm g:users:rwx /opt/workspace
 printf "\n\nConfiguring bootloader...\n"
 echo GRUB_DISTRIBUTOR=\"Arch Nemesis\" > /etc/default/grub
 grub-install --removable --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --sbat=/usr/share/grub/sbat.csv --modules="all_video boot btrfs cat chain configfile echo efifwsetup efinet ext2 fat font gettext gfxmenu gfxterm gfxterm_background gzio halt help hfsplus iso9660 jpeg keystatus loadenv loopback linux ls lsefi lsefimmap lsefisystab lssal memdisk minicmd normal ntfs part_apple part_msdos part_gpt password_pbkdf2 png probe reboot regexp search search_fs_uuid search_fs_file search_label sleep smbios test true video xfs zfs zfscrypt zfsinfo play cpuid tpm luks lvm"
-sudo -u $username /bin/sh -c "echo $password | yay --sudoflags \"-S\" --noconfirm -S shim-signed sbsigntools"
+sudo -u $username /bin/sh -c "echo $password | yay --sudoflags \"-S\" --noconfirm -Sy shim-signed sbsigntools"
 mv /boot/EFI/BOOT/BOOTx64.EFI /boot/EFI/BOOT/grubx64.efi
 cp /usr/share/shim-signed/shimx64.efi /boot/EFI/BOOT/BOOTx64.EFI
 cp /usr/share/shim-signed/mmx64.efi /boot/EFI/BOOT/
@@ -223,11 +223,11 @@ usermod -s /bin/fish root
 
 ## DESKTOP ENVIRONMENT
 # Install Gnome
-pacman --noconfirm -S gnome
+pacman --noconfirm -Sy gnome
 systemctl enable gdm.service
 
 # Gnome Shell Extensions
-sudo -Hu $username /bin/sh -c "echo $password | yay --sudoflags \"-S\" --noconfirm -S gnome-shell-extension-blur-my-shell gnome-shell-extension-tilingshell gnome-shell-extension-no-overview gnome-shell-extension-rounded-window-corners-reborn-git catppuccin-cursors-mocha papirus-icon-theme papirus-folders-catppuccin-git wofi adw-gtk-theme gradience kitty thunar firefox libreoffice glib2-devel pipewire-libcamera"
+sudo -Hu $username /bin/sh -c "echo $password | yay --sudoflags \"-S\" --noconfirm -Sy gnome-shell-extension-blur-my-shell gnome-shell-extension-tilingshell gnome-shell-extension-no-overview gnome-shell-extension-rounded-window-corners-reborn-git catppuccin-cursors-mocha papirus-icon-theme papirus-folders-catppuccin-git wofi adw-gtk-theme gradience kitty thunar firefox libreoffice glib2-devel pipewire-libcamera"
 sudo -Hu $username dbus-launch --exit-with-session gsettings set org.gnome.shell enabled-extensions "[\"blur-my-shell@aunetx\", \"no-overview@fthx\", \"rounded-window-corners@fxgn\", \"system-monitor@gnome-shell-extensions.gcampax.github.com\", \"tilingshell@ferrarodomenico.com\", \"user-theme@gnome-shell-extensions.gcampax.github.com\"]"
 #sudo -Hu $username gnome-extensions enable blur-my-shell@aunetx
 #sudo -Hu $username gnome-extensions enable tilingshell@ferrarodomenico.com
@@ -343,7 +343,7 @@ if [ "$vm" = true ]; then
     mv /usr/bin/pkexec.bk /usr/bin/pkexec
     systemctl enable gnome-remote-desktop.service
     # VM Tools
-    pacman --noconfirm -S open-vm-tools
+    pacman --noconfirm -Sy open-vm-tools
     systemctl enable vmtoolsd
     systemctl enable vmware-vmblock-fuse
 fi
