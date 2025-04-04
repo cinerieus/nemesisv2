@@ -227,7 +227,7 @@ pacman --noconfirm -S gnome
 systemctl enable gdm.service
 
 # Gnome Shell Extensions
-sudo -Hu $username /bin/sh -c "echo $password | yay --sudoflags \"-S\" --noconfirm -S gnome-shell-extension-blur-my-shell gnome-shell-extension-tilingshell gnome-shell-extension-no-overview gnome-shell-extension-rounded-window-corners-reborn-git catppuccin-cursors-mocha papirus-icon-theme papirus-folders-catppuccin-git wofi adw-gtk-theme gradience kitty thunar firefox glib2-devel pipewire-libcamera"
+sudo -Hu $username /bin/sh -c "echo $password | yay --sudoflags \"-S\" --noconfirm -S gnome-shell-extension-blur-my-shell gnome-shell-extension-tilingshell gnome-shell-extension-no-overview gnome-shell-extension-rounded-window-corners-reborn-git catppuccin-cursors-mocha papirus-icon-theme papirus-folders-catppuccin-git wofi adw-gtk-theme gradience kitty thunar firefox libreoffice glib2-devel pipewire-libcamera"
 sudo -Hu $username dbus-launch --exit-with-session gsettings set org.gnome.shell enabled-extensions "[\"blur-my-shell@aunetx\", \"no-overview@fthx\", \"rounded-window-corners@fxgn\", \"system-monitor@gnome-shell-extensions.gcampax.github.com\", \"tilingshell@ferrarodomenico.com\", \"user-theme@gnome-shell-extensions.gcampax.github.com\"]"
 #sudo -Hu $username gnome-extensions enable blur-my-shell@aunetx
 #sudo -Hu $username gnome-extensions enable tilingshell@ferrarodomenico.com
