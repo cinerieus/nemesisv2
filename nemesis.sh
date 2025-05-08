@@ -323,7 +323,7 @@ if [ "$vm" = true ]; then
     echo "
     HostKey /etc/ssh/ssh_host_ed25519_key
     PermitRootLogin no
-    PasswordAuthentication no
+    PasswordAuthentication yes
     MaxAuthTries 10" >> /etc/ssh/sshd_config
     systemctl enable sshd.service
     if [ -n "$ssh_key" ]; then
