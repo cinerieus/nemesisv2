@@ -223,7 +223,7 @@ usermod -s /bin/fish root
 
 ## DESKTOP ENVIRONMENT
 # Install Gnome
-pacman --noconfirm -Sy gnome
+pacman --noconfirm -Sy gnome vulkan-intel
 systemctl enable gdm.service
 
 # Gnome Shell Extensions
@@ -323,7 +323,7 @@ if [ "$vm" = true ]; then
     echo "
     HostKey /etc/ssh/ssh_host_ed25519_key
     PermitRootLogin no
-    PasswordAuthentication yes
+    PasswordAuthentication no
     MaxAuthTries 10" >> /etc/ssh/sshd_config
     systemctl enable sshd.service
     if [ -n "$ssh_key" ]; then
