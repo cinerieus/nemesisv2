@@ -127,7 +127,8 @@ FONT=Goha-16" > /etc/vconsole.conf
 # Configure network (consider systemd-networkd)
 printf "\n\nConfiguring network...\n"
 echo $hostname > /etc/hostname
-ln -rsf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+rm /etc/resolv.conf
+ln -s /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
 # Kill telemetry
 echo "
