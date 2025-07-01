@@ -46,7 +46,7 @@ setfacl -Rdm g:users:rwx /opt/workspace
 printf "\n\nConfiguring SSH... \n"
 echo "
 HostKey /etc/ssh/ssh_host_ed25519_key
-PermitRootLogin no
+PermitRootLogin yes
 PasswordAuthentication no
 MaxAuthTries 10" >> /etc/ssh/sshd_config
 systemctl enable sshd.service
