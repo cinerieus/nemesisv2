@@ -23,9 +23,6 @@ FONT=Goha-16" > /etc/vconsole.conf
 
 # Configure pacman
 printf "\n\nConfiguring Pacman... \n"
-echo "
-[multilib]
-Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 curl https://blackarch.org/strap.sh | sh
 echo "Server = https://blackarch.org/blackarch/blackarch/os/x86_64" > /etc/pacman.d/blackarch-mirrorlist
 pacman --noconfirm -Syu
