@@ -26,7 +26,7 @@ printf "\n\nConfiguring Pacman... \n"
 curl https://blackarch.org/strap.sh | sh
 echo "Server = https://blackarch.org/blackarch/blackarch/os/x86_64" > /etc/pacman.d/blackarch-mirrorlist
 pacman --noconfirm -Syu
-pacman --noconfirm -Sy base-devel yay systemd-resolvconf openssh git neovim tmux wget p7zip neofetch noto-fonts ttf-noto-nerd fish less ldns
+pacman --noconfirm -Sy base-devel yay systemd-resolvconf openssh git neovim tmux wget p7zip neofetch noto-fonts ttf-noto-nerd fish ldns
 
 # Configure users
 printf "\n\nConfiguring users...\n"
