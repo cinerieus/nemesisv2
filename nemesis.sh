@@ -104,7 +104,7 @@ Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 curl https://blackarch.org/strap.sh | sh
 echo "Server = https://blackarch.org/blackarch/blackarch/os/x86_64" > /etc/pacman.d/blackarch-mirrorlist
 pacman --noconfirm -Syu
-pacman --noconfirm -Sy base-devel yay networkmanager systemd-resolvconf openssh git neovim tmux wget p7zip neofetch noto-fonts ttf-noto-nerd fish less ldns
+pacman --noconfirm -Sy sudo base-devel yay networkmanager systemd-resolvconf openssh git neovim tmux wget p7zip neofetch noto-fonts ttf-noto-nerd fish less ldns
 
 # Set timezone to UTC
 printf "\n\nSetting timezone...\n"
