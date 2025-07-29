@@ -352,6 +352,7 @@ fi
 
 # Chroot and run stage 2 script
 printf "\n\nRunning stage 2..."
+cp /etc/resolv.conf /mnt/etc/resolv.conf
 chmod +x /mnt/nemesis.sh
 arch-chroot /mnt ./nemesis.sh
 rm /mnt/nemesis.sh
