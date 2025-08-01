@@ -13,7 +13,6 @@ john \
 medusa \
 ffuf \
 seclists \
-ldapdomaindump \
 binwalk \
 evil-winrm \
 responder \
