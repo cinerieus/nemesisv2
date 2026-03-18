@@ -1,8 +1,6 @@
 #!/bin/sh
 yay --noconfirm -Sy \
-remmina \
 socat \
-go \
 proxychains-ng \
 nmap \
 masscan \
@@ -14,15 +12,15 @@ medusa \
 ffuf \
 seclists \
 binwalk \
-evil-winrm \
+netexec \
 responder \
 certipy \
+bloodyad \
 httpx \
 dnsx \
 nuclei \
 subfinder \
-strace \
-apachedirectorystudio
+strace
 
 mkdir -p /opt/workspace/wordlists /opt/workspace/linux /opt/workspace/windows /opt/workspace/peassng /opt/workspace/chisel /opt/workspace/c2/sliver
 wget http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2 -O /opt/workspace/wordlists/rockyou.bz2
