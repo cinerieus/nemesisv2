@@ -117,9 +117,9 @@ ffuf \
 seclists \
 ldapdomaindump \
 binwalk \
-evil-winrm \
 responder \
 certipy \
+netexec \
 httpx \
 dnsx \
 nuclei \
