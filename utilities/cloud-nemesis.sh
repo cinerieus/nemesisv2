@@ -27,7 +27,7 @@ curl https://blackarch.org/strap.sh | sh
 echo "Server = https://blackarch.org/blackarch/blackarch/os/x86_64" > /etc/pacman.d/blackarch-mirrorlist
 rm -rf /usr/lib/firmware/nvidia/
 pacman --noconfirm -Syu
-pacman --noconfirm -S yay systemd-resolvconf openssh git neovim tmux wget p7zip noto-fonts ttf-noto-nerd fish ldns
+pacman --noconfirm -S yay systemd-resolvconf openssh git neovim tmux wget 7zip noto-fonts ttf-noto-nerd fish ldns
 # networkmanager less neofetch base-devel
 
 # Configure users
