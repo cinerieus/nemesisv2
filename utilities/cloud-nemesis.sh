@@ -78,7 +78,7 @@ chmod 755 /etc/fonts
 sudo -Hu $username curl https://raw.githubusercontent.com/cinerieus/nemesisv2/refs/heads/main/config/.Xresources -o /home/$username/.Xresources && cp /home/$username/.Xresources /root/.Xresources
 sudo -Hu $username xrdb -merge /home/$username/.Xresources && xrdb -merge /home/$username/.Xresources
 # Fish
-sudo -Hu $username curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > /home/$username/install.fish
+sudo -Hu $username curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/refs/heads/master/bin/install > /home/$username/install.fish
 sudo -Hu $username fish /home/$username/install.fish --noninteractive && \
 mv /home/$username/install.fish /root
 sudo -Hu $username git clone https://github.com/cinerieus/theme-sushi.git /home/$username/.local/share/omf/themes/sushi
