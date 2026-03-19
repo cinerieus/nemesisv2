@@ -82,7 +82,7 @@ sudo -Hu $username curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/
 sudo -Hu $username fish /home/$username/install.fish --noninteractive && \
 mv /home/$username/install.fish /root
 sudo -Hu $username git clone https://github.com/cinerieus/theme-sushi.git /home/$username/.local/share/omf/themes/sushi
-sudo -Hu $username curl https://raw.githubusercontent.com/cinerieus/nemesis/master/config.fish -o /home/$username/.config/fish/config.fish
+sudo -Hu $username curl https://raw.githubusercontent.com/cinerieus/nemesisv2/refs/heads/main/config/config.fish -o /home/$username/.config/fish/config.fish
 sudo -Hu $username fish -c "omf theme sushi"
 fish /root/install.fish --noninteractive
 rm /root/install.fish
