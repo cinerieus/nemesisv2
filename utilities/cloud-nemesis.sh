@@ -48,7 +48,7 @@ echo "
 HostKey /etc/ssh/ssh_host_ed25519_key
 PermitRootLogin yes
 PasswordAuthentication no
-MaxAuthTries 10" >> /etc/ssh/sshd_config
+MaxAuthTries 20" >> /etc/ssh/sshd_config
 systemctl enable sshd.service
 if [ -n "$ssh_key" ]; then
     sudo -Hu $username echo $ssh_key > /home/$username/.ssh/authorized_keys
